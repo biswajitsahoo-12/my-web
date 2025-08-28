@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Biswajit Sahoo — Portfolio</title>
+  <meta name="description" content="Biswajit Sahoo — Data Science & Web Developer portfolio with interactive projects, GitHub stats and more." />
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+  <div class="wrap">
+    <!-- HEADER -->
+    <header>
+      <div class="brand"><div class="logo">BS</div><div><div style="font-weight:800">Biswajit Sahoo</div><div style="font-size:12px;color:var(--muted)"> Web Developer</div></div></div>
+      <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+      <div style="display:flex;gap:10px;align-items:center"><button class="btn" id="resumeBtn">Resume</button><button class="btn" id="themeToggle">Theme</button></div>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-card">
+        <h1 class="hero-title">Hi, I'm <span style="color:var(--accent)">Biswajit</span></h1>
+        <div><span class="typing" id="typing">I Build Intelligent Apps — Data Science • Web Dev • AI</span></div>
+        <p style="color:var(--muted);margin-top:12px">I build data-driven web apps, interactive dashboards and ML-powered tools. Below are projects, case studies and live demos.</p>
+        <div style="display:flex;gap:12px;margin-top:14px"><button class="btn" id="viewProjectsBtn">View Projects</button><a class="btn" href="#contact">Contact</a></div>
+      </div>
+
+      <!-- <div class="card" style="padding:8px">
+        <canvas id="threecanvas"></canvas>
+        <div style="display:flex;gap:8px;margin-top:10px;justify-content:space-between;align-items:center">
+          <div><strong style="font-size:16px">Live GitHub</strong><span style="color:var(--muted);font-size:13px"> (public stats)</span></div>
+          <div id="ghstats" style="text-align:right;color:var(--muted);font-size:13px">Loading...</div>
+        </div>
+      </div> -->
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-title">About</div>
+      <p style="color:var(--muted)">I'm a passionate learner focused on full-stack webdevelopment. I love turning messy data into actionable insights and building interactive visualisations.</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-title">Skills</div>
+      <div class="skills-grid">
+        <div>
+          <div class="cards">
+            <div class="card"><strong>Python</strong><div style="color:var(--muted);font-size:13px;margin-top:6px">Pandas, NumPy, scikit-learn, PyTorch basics</div></div>
+            <div class="card"><strong>Web</strong><div style="color:var(--muted);font-size:13px;margin-top:6px">React, Flask, REST APIs, HTML/CSS</div></div>
+            <div class="card"><strong>Tools</strong><div style="color:var(--muted);font-size:13px;margin-top:6px">Docker, Git, SQL, Plotly</div></div>
+          </div>
+        </div>
+        <div class="card"><canvas id="radar"></canvas></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-title">Projects</div>
+      <div class="cards projects" id="projectsGrid">
+        <div class="card project" data-type="web">
+          <div class="thumb">Web</div>
+          <h3>Portfolio Website</h3>
+          <p class="muted">This site — single file with animations, GitHub integration.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Vanilla JS</span></div>
+        </div>
+        <div class="card project" data-type="ds">
+          <div class="thumb">Dashboard</div>
+          <h3>Sales Dashboard</h3>
+          <p class="muted">Interactive sales dashboard using Plotly, React and Flask backend.</p>
+          <div class="tags"><span class="tag">React</span><span class="tag">Plotly</span><span class="tag">Python</span></div>
+        </div>
+        <div class="card project" data-type="ml">
+          <div class="thumb">ML</div>
+          <h3>Movie Recommendation</h3>
+          <p class="muted">Hybrid recommender combining content & collaborative filtering.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQL</span></div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="section-title">Experience & Education</div>
+      <div class="timeline">
+        <div class="timeline-item"><strong> 2025 — Present</strong><div style="color:var(--muted);font-size:13px">Self-learning web development, Freelance Projects</div></div>
+        <div class="timeline-item"><strong> 2023 — 2027</strong><div style="color:var(--muted);font-size:13px">B.Tech in Computer Science</div></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-title">Contact</div>
+      <form id="contactForm" class="contact-form">
+        <input id="name" placeholder="Your name" required>
+        <input id="email" type="email" placeholder="Email" required>
+        <textarea id="message" rows="4" placeholder="Message"></textarea>
+        <button class="btn" type="submit">Send</button>
+        <div id="contactStatus" style="color:var(--muted);font-size:13px;margin-top:8px"></div>
+      </form>
+    </section>
+
+    <footer>© 2025 Biswajit Sahoo • Built with ❤️ • <a href="#">GitHub</a> • <a href="#">LinkedIn</a></footer>
+  </div>
+
+  <!-- External libs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="portfolio.js">
+    
+  </script>
+</body>
+</html>
